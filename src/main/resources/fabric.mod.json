@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "lockmyhotbar",
+  "version": "${version}",
+  "name": "Lock My Hotbar",
+  "description": "Lock your hotbar to prevent items being accidentally thrown.",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/lockmyhotbar/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.kalkafox.lockmyhotbar.client.LockMyHotbarClient"
+    ],
+    "main": [
+      "dev.kalkafox.lockmyhotbar.LockMyHotbar"
+    ]
+  },
+  "mixins": [
+    "lockmyhotbar.mixins.json",
+    {
+      "config": "lockmyhotbar.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
